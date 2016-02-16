@@ -3,9 +3,9 @@
 Plugin Name: Search Form Shortcode
 Plugin URI: http://om4.com.au/wordpress-plugins/
 Description: Display a WordPress search box/form using a simple shortcode: [search-form buttonimage="" buttontext="" fieldtext=""]
-Version: 1.0
+Version: 1.0.1
 Author: OM4
-Author URI: http://om4.com.au/
+Author URI: https://om4.com.au/
 Git URI: https://github.com/OM4/search-form-shortcode
 Git Branch: release
 License: GPLv2
@@ -13,7 +13,7 @@ License: GPLv2
 
 /*
 
-   Copyright 2012-2013 OM4 (email: info@om4.com.au    web: http://om4.com.au/)
+   Copyright 2012-2016 OM4 (email: info@om4.com.au    web: https://om4.com.au/)
 
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -43,9 +43,9 @@ License: GPLv2
 function om4_search_form_shortcode( $atts, $content = null ) {
 
 	$defaults = array(
-		'buttonimage' => ''
-	, 'buttontext'  => ''
-	, 'fieldtext'   => ''
+			'buttonimage'  => ''
+			, 'buttontext' => ''
+			, 'fieldtext'  => ''
 	);
 
 	$atts = shortcode_atts( $defaults, $atts );
@@ -75,4 +75,3 @@ function om4_search_form_shortcode( $atts, $content = null ) {
 	return '<div class="inline-search">' . $content . '</div>';
 }
 add_shortcode( 'search-form', 'om4_search_form_shortcode' );
-
